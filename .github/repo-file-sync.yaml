@@ -1,0 +1,3 @@
+# .github/repo-file-sync.yaml
+kagankan/sync-test-a:
+  - README.md
