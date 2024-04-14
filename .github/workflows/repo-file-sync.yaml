@@ -1,0 +1,32 @@
+# .github/workflows/repo-file-sync.yaml
+name: Repo File Sync
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '0 3 * * MON-FRI' # Run workflow at 12:00 JST every MON-FRI
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Generate token
+        id: generate_token
+        uses: tibdex/github-app-token@v1
+        with:
+          app_id: ${{ secrets.REPO_FILE_SYNC_APP_ID }}
+          private_key: ${{ secrets.REPO_FILE_SYNC_PRIVATE_KEY }}
+
+      - name: Sync files
+        uses: StudistCorporation/actions-repo-file-sync@v0.0.4
+        with:
+          token: ${{ steps.generate_token.outputs.token }}
+          username: john
+          email: john@example.com
+          team_reviewers: 'sre'
