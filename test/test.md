@@ -1,4 +1,4 @@
 あああ
 drd
 test
-new
+ne
