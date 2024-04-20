@@ -3,7 +3,7 @@
 bだけの変更
 
 追加するよ
-edit eet
+edit eett
 ブランチで編集
 
 あああ
