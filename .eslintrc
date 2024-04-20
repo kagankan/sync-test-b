@@ -1,5 +1,5 @@
 {
   "rules": {
-    "example":["error",{}]
+    "example":["error"]
   }
 }
