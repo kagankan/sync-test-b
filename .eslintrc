@@ -1,5 +1,5 @@
 {
   "rules": {
-    "more": ["error", "test2"]
+    "more": ["error", {}]
   }
 }
