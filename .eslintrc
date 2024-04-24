@@ -1,5 +1,5 @@
 {
   "rules": {
-    "more": ["error", {"a":"b"}]
+    "more": ["error", {"a":"c"}]
   }
 }
